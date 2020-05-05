@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>TODOy</title>
+        <link rel="shortcut icon" href="https://i.imgur.com/69mCrs0.jpg" type="image/jpg">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <style>
+            html {
+                overflow: hidden;
+                background-color: black;
+                user-select: none;
+            }
+            body {
+                background-color: transparent;
+            }
+
+            .bg-container img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: auto;
+                opacity: 0.5;
+                z-index: -2;
+                -webkit-user-drag: none;
+            }
+
+            .container {
+                z-index: 999;
+            }
+
+            #white-txt {
+                color: white !important;
+            }
+
+            .highlightable {
+                user-select: text;
+            }
+
+            footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                color: white;
+                text-align: center;
+            }
+
+            #pink-link {
+                color: pink;
+            }
+            #pink-link:hover {
+                color: rgb(214, 161, 170);
+            }
+        </style>
+        <!-- External Libraries -->
+        <!-- Invisible Scripts -->
+    </head>
+    <body>
+        <!-- Visable Scripts -->
+
+        <div class="bg-container">
+            <img src="https://i.ytimg.com/vi/0sLaYGjGIDo/maxresdefault.jpg" alt="Zero Two">
+        </div>
+
+        <div class="container my-5">
+            <a href="#" style="text-decoration: none;"><h1 id="white-txt">TODOy</h1></a>
+            <form action="/todoItems" method="POST" class="my-4 form-inline">
+                <label for="todoItem" class="sr-only">TODO Item</label>
+                <input type="text" name="todoItem" id="todoItem" class="form-control col mr-2">
+                <button type="submit" class="btn btn-success">Add TODO Item</button>
+            </form>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th id="white-txt">TODO Item</th>
+                        <th id="white-txt">TODO Item Created Time</th>
+                        <th id="white-txt">Delete/ Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% todoItems.forEach(todoItem => { %>
+                        <tr>
+                            <td id="white-txt" class="highlightable"><%= todoItem.item %></td>
+                            <td id="white-txt" class="highlightable"><%= todoItem.date %></td>
+                            <td><button class="btn btn-danger">Delete</button>&nbsp;&nbsp;<button class="btn btn-warning">Change</button></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+
+        <footer>
+            <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+            Made with <i class="icon ion-heart"></i> by <a href="https://kyzer.co/" id="pink-link">Sin</a>.
+        </footer>
+    </body>
+</html>

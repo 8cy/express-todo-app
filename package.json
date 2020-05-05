@@ -1,0 +1,36 @@
+{
+  "name": "express-todo-app",
+  "version": "1.0.0",
+  "description": "A TODO web app made using Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/8cy/express-todo-app"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "javascript",
+    "js",
+    "typescript",
+    "ts",
+    "todo",
+    "npm",
+    "todo"
+  ],
+  "author": "Sin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/8cy/express-todo-app/issues"
+  },
+  "homepage": "https://github.com/8cy/express-todo-app#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.12"
+  }
+}
