@@ -37,7 +37,7 @@ Feel free to take these things as inspiration as I will probably not be updating
 
 ### Links
 * [Website](https://kyzer.co/)
-* [GitHub](https://github.com/8cy/express-todo-app)
+* [GitHub](https://github.com/fuwn/express-todo-app)
 
 ### License
 MIT
